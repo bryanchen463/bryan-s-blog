@@ -1,6 +1,7 @@
 baseURL = "https://bryanchen463.github.io/bryan-s-blog/"
 languageCode = "zh-cn"
 title = "Bryan's Blog"
+theme = "ananke"
 publishDir = "public"
 
 [build]
@@ -12,7 +13,3 @@ publishDir = "public"
 [taxonomies]
   tag = "tags"
   category = "categories"
-
-[module]
-  [[module.imports]]
-    path = "github.com/adityatelange/hugo-PaperMod"
