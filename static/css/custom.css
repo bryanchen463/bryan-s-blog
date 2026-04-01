@@ -347,9 +347,119 @@ blockquote {
   color: #6d9e94;
 }
 
+/* =========================================
+   间距与留白增强 — 木气舒展
+   ========================================= */
+
+/* 主容器左右留白加大 */
+.container {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  max-width: 1200px;
+}
+
+/* 文章正文区域加大间距 */
+.single .content {
+  padding: 2rem 2.5rem;
+  line-height: 1.9;
+  font-size: 1.08em;
+}
+
+/* 段落间距 */
+.content p {
+  margin-bottom: 1.5em;
+}
+
+/* 标题上下间距加大 */
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+/* 列表间距加大 */
+.content ul,
+.content ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.8em;
+}
+
+.content li {
+  margin-bottom: 0.6em;
+  line-height: 1.8;
+}
+
+/* 卡片/摘要区域加大 padding */
+.summary,
+.article-card,
+.card {
+  padding: 1.8rem 2rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 首页文章列表间距 */
+.home .summary:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* 标签组间距 */
+.post-tags {
+  margin-top: 1.2rem;
+  gap: 0.5rem;
+}
+
+.post-tags a {
+  padding: 0.3em 0.75em !important;
+  margin-right: 0.3rem;
+}
+
+/* 引用块间距加大 */
+blockquote {
+  margin: 1.8em 0;
+  padding: 1em 1.5em;
+}
+
+/* 代码块间距 */
+.code-block {
+  margin: 1.8em 0;
+}
+
+/* 页面两侧留白（桌面端） */
+.page {
+  padding: 2.5rem 0;
+}
+
+/* 文章元信息间距 */
+.post-meta {
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+/* TOC 目录间距 */
+.toc {
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* 回到顶部按钮位置 */
+#back-to-top {
+  bottom: 2.5rem;
+  right: 2.5rem;
+}
+
+/* footer 间距加大 */
+.footer {
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
 /* === 响应式微调 === */
 @media (max-width: 768px) {
   h1 { font-size: 1.7em; }
   h2 { font-size: 1.3em; }
-  .content { font-size: 1em; }
+  .content { font-size: 1em; padding: 1.2rem; }
+  .container { padding-left: 1.2rem; padding-right: 1.2rem; }
+  .summary, .card, .article-card { padding: 1.2rem 1.4rem !important; }
 }
