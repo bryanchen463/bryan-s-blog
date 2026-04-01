@@ -16,7 +16,6 @@ publishDir = "public"
 
 [params]
   description = "Exploring the flow of code & life. Bryan的技术与生活博客"
-  author = "Bryan Chen"
 
   [params.author]
     name = "Bryan Chen"
