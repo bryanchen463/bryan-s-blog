@@ -15,4 +15,4 @@ publishDir = "public"
 
 [module]
   [[module.imports]]
-    path = "github.com/theNewDynamic/gohugo-theme-ananke"
+    path = "github.com/adityatelange/hugo-PaperMod"
