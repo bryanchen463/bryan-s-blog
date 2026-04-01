@@ -1,0 +1,15 @@
+baseURL = "https://bryanchen007.github.io/"
+languageCode = "zh-cn"
+title = "Bryan的博客"
+theme = "hugo-theme-ananke"
+publishDir = "public"
+
+[build]
+  writeStats = true
+
+[build.archive]
+  enable = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
