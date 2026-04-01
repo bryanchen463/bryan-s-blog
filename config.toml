@@ -1,7 +1,7 @@
 baseURL = "https://bryanchen463.github.io/bryan-s-blog/"
 languageCode = "zh-cn"
 title = "Bryan's Blog"
-theme = "ananke"
+theme = "LoveIt"
 publishDir = "public"
 
 [build]
@@ -13,3 +13,7 @@ publishDir = "public"
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+[params]
+  description = "Bryan的技术与生活博客"
+  author = "Bryan Chen"
