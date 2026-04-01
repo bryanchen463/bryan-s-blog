@@ -25,3 +25,6 @@ publishDir = "public"
 
   [params.comment]
     enable = false
+
+  [params.assets]
+    customCSS = ["css/custom.css"]
