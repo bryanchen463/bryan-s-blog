@@ -1,6 +1,6 @@
 baseURL = "https://bryanchen463.github.io/bryan-s-blog/"
 languageCode = "zh-cn"
-title = "Bryan's Blog"
+title = "Bryan Chen"
 theme = "LoveIt"
 publishDir = "public"
 
@@ -15,7 +15,8 @@ publishDir = "public"
   category = "categories"
 
 [params]
-  description = "Bryan的技术与生活博客"
+  description = "Exploring the flow of code & life. Bryan的技术与生活博客"
+  author = "Bryan Chen"
 
   [params.author]
     name = "Bryan Chen"
