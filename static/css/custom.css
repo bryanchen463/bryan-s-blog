@@ -13,11 +13,11 @@
   --wu-body-bg: #e8f0f3;
   --wu-bg-water: #edf5f8;
   --wu-card-bg: rgba(255, 255, 255, 0.84);
-  --wu-card-border: rgba(56, 133, 127, 0.14);
+  --wu-card-border: rgba(82, 121, 111, 0.14);
   --wu-mask-bg: rgba(232, 245, 248, 0.90);
-  --wu-border-color: rgba(56, 133, 127, 0.16);
-  --wu-wood-primary: #1a5c54;
-  --wu-wood-secondary: #2a7a6e;
+  --wu-border-color: rgba(82, 121, 111, 0.16);
+  --wu-wood-primary: #52796f;
+  --wu-wood-secondary: #6b8f85;
   --wu-fire-primary: #c84b31;
   --wu-fire-hover: #d4622a;
   --wu-text-gold: #2c3e3a;
@@ -28,11 +28,11 @@
   --wu-body-bg: #0d1a1e;
   --wu-bg-water: #0f1f24;
   --wu-card-bg: rgba(20, 40, 46, 0.85);
-  --wu-card-border: rgba(76, 175, 152, 0.18);
+  --wu-card-border: rgba(138, 181, 168, 0.18);
   --wu-mask-bg: rgba(13, 26, 30, 0.92);
-  --wu-border-color: rgba(76, 175, 152, 0.20);
-  --wu-wood-primary: #4db89e;
-  --wu-wood-secondary: #6dcaa8;
+  --wu-border-color: rgba(138, 181, 168, 0.20);
+  --wu-wood-primary: #8ab5a8;
+  --wu-wood-secondary: #8ab5a8;
   --wu-fire-primary: #e07540;
   --wu-fire-hover: #f08850;
   --wu-text-gold: #c5d8d4;
@@ -44,7 +44,7 @@ body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--wu-body-bg);
   background-image:
-    radial-gradient(ellipse at 10% 20%, rgba(76, 175, 152, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 20%, rgba(138, 181, 168, 0.12) 0%, transparent 45%),
     radial-gradient(ellipse at 88% 80%, rgba(200, 75, 49, 0.06) 0%, transparent 40%),
     radial-gradient(ellipse at 50% 50%, rgba(232, 245, 248, 0.6) 0%, transparent 70%);
   background-attachment: fixed;
@@ -106,7 +106,7 @@ h4 {
   top: 0.2em;
   bottom: 0.2em;
   width: 5px;
-  background: linear-gradient(180deg, var(--wu-wood-primary), #4db89e);
+  background: linear-gradient(180deg, var(--wu-wood-primary), #8ab5a8);
   border-radius: 99px;
 }
 
@@ -169,8 +169,8 @@ a.btn:hover {
 .category,
 .list .list-item a {
   color: var(--wu-wood-primary) !important;
-  border: 1px solid rgba(56, 133, 127, 0.25);
-  background: rgba(56, 133, 127, 0.06);
+  border: 1px solid rgba(82, 121, 111, 0.25);
+  background: rgba(82, 121, 111, 0.06);
   border-radius: 99px;
   transition: all 0.25s;
   padding: 0.25em 0.9em;
@@ -188,7 +188,7 @@ a.btn:hover {
 
 /* 列表项 */
 ul > li::marker {
-  color: #4db89e;
+  color: #8ab5a8;
 }
 
 ol > li::marker {
@@ -214,7 +214,7 @@ ol > li::marker {
   background: var(--wu-card-bg) !important;
   border: 1px solid var(--wu-card-border) !important;
   border-radius: 2.5rem !important;
-  box-shadow: 0 4px 30px rgba(56, 133, 127, 0.06);
+  box-shadow: 0 4px 30px rgba(82, 121, 111, 0.06);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -225,9 +225,9 @@ ol > li::marker {
 .summary:hover,
 .list .list-item:hover,
 .home .summary:hover {
-  box-shadow: 0 20px 55px rgba(56, 133, 127, 0.14);
+  box-shadow: 0 20px 55px rgba(82, 121, 111, 0.14);
   transform: translateY(-4px) scale(1.008);
-  border-color: rgba(56, 133, 127, 0.32) !important;
+  border-color: rgba(82, 121, 111, 0.32) !important;
 }
 
 #mask {
@@ -248,7 +248,7 @@ ol > li::marker {
 .code-block,
 .highlight pre {
   background: rgba(13, 26, 30, 0.05) !important;
-  border: 1px solid rgba(56, 133, 127, 0.15);
+  border: 1px solid rgba(82, 121, 111, 0.15);
   border-radius: 1.2rem !important;
   margin: 2em 0;
 }
@@ -259,14 +259,14 @@ ol > li::marker {
 }
 
 hr {
-  border-color: rgba(56, 133, 127, 0.18);
+  border-color: rgba(82, 121, 111, 0.18);
   border-top-style: dashed;
   margin: 2.5em 0;
 }
 
 blockquote {
-  border-left: 4px solid #4db89e;
-  background: rgba(56, 133, 127, 0.06);
+  border-left: 4px solid #8ab5a8;
+  background: rgba(82, 121, 111, 0.06);
   border-radius: 0 1.2rem 1.2rem 0;
   padding: 1em 1.8em;
   color: var(--wu-text-gold);
@@ -280,7 +280,7 @@ blockquote {
   background: rgba(232, 245, 248, 0.92) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(56, 133, 127, 0.1);
+  border-bottom: 1px solid rgba(82, 121, 111, 0.1);
   height: 72px;
 }
 
@@ -309,7 +309,7 @@ blockquote {
 
 .footer {
   background: transparent;
-  border-top: 1px solid rgba(56, 133, 127, 0.1);
+  border-top: 1px solid rgba(82, 121, 111, 0.1);
   padding: 2.5rem 0;
   margin-top: 4rem;
 }
@@ -337,7 +337,7 @@ blockquote {
 .toc a:hover, .toc a.active {
   color: var(--wu-wood-primary) !important;
   border-left-color: var(--wu-fire-primary);
-  background: rgba(56, 133, 127, 0.05);
+  background: rgba(82, 121, 111, 0.05);
 }
 
 /* === 首页大标题感 === */
@@ -365,7 +365,7 @@ blockquote {
 
 /* 元信息线 */
 .post-meta {
-  border-bottom: 1px solid rgba(56, 133, 127, 0.12);
+  border-bottom: 1px solid rgba(82, 121, 111, 0.12);
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -388,12 +388,12 @@ blockquote {
 
 /* === 滚动条 === */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(56, 133, 127, 0.05); }
+::-webkit-scrollbar-track { background: rgba(82, 121, 111, 0.05); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(56, 133, 127, 0.28);
+  background: rgba(82, 121, 111, 0.28);
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(56, 133, 127, 0.5); }
+::-webkit-scrollbar-thumb:hover { background: rgba(82, 121, 111, 0.5); }
 
 /* === 回到顶部按钮 === */
 #back-to-top {
@@ -458,15 +458,15 @@ blockquote { margin: 2em 0; padding: 1em 1.8em; }
 /* === 暗色模式全量覆盖 === */
 :root[data-theme=dark] h1,
 :root[data-theme=dark] h2 {
-  color: #4db89e !important;
+  color: #8ab5a8 !important;
 }
 :root[data-theme=dark] h3,
 :root[data-theme=dark] h4 {
-  color: #6dcaa8 !important;
+  color: #a8c5ba !important;
 }
 :root[data-theme=dark] .content { color: #c5d8d4; }
 :root[data-theme=dark] blockquote {
-  background: rgba(77, 184, 158, 0.08);
+  background: rgba(138, 181, 168, 0.08);
   color: #8ab5a8;
 }
 :root[data-theme=dark] .content a:not(.btn):not(.post-footer a) {
@@ -474,12 +474,12 @@ blockquote { margin: 2em 0; padding: 1em 1.8em; }
 }
 :root[data-theme=dark] .post-tags a,
 :root[data-theme=dark] .tag {
-  color: #4db89e !important;
-  border-color: rgba(77, 184, 158, 0.28);
-  background: rgba(77, 184, 158, 0.08);
+  color: #8ab5a8 !important;
+  border-color: rgba(138, 181, 168, 0.28);
+  background: rgba(138, 181, 168, 0.08);
 }
 :root[data-theme=dark] .home .home-subtitle { color: #6d9e94; }
-:root[data-theme=dark] .single-title { color: #4db89e !important; }
+:root[data-theme=dark] .single-title { color: #8ab5a8 !important; }
 
 /* === 响应式 === */
 @media (max-width: 768px) {
