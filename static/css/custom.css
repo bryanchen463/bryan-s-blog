@@ -413,16 +413,33 @@ blockquote {
   box-shadow: 0 8px 30px rgba(200, 75, 49, 0.4);
 }
 
-/* === 文章正文区加大 === */
+/* === 文章正文区居中 === */
 .single .content {
   padding: 2.5rem 3rem;
   line-height: 1.9;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 1200px;
+}
+
+/* 首页文章列表也居中 */
+.home .container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 文章卡片宽度收窄并居中 */
+.summary {
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .page { padding: 2.5rem 0; }
@@ -485,9 +502,10 @@ blockquote { margin: 2em 0; padding: 1em 1.8em; }
 @media (max-width: 768px) {
   h1 { font-size: 2.2em; }
   h2 { font-size: 1.6em; }
-  .content { font-size: 1em; padding: 1.2rem; }
-  .container { padding-left: 1.2rem; padding-right: 1.2rem; }
-  .summary, .card { padding: 1.5rem !important; }
-  .single .content { padding: 1.5rem; }
+  .content { font-size: 1em; padding: 1.2rem; max-width: 100%; }
+  .container { padding-left: 1.2rem; padding-right: 1.2rem; max-width: 100%; }
+  .home .container { max-width: 100%; }
+  .summary, .card { padding: 1.5rem !important; max-width: 100% !important; }
+  .single .content { padding: 1.5rem; max-width: 100%; }
   .single-title { font-size: 1.6em !important; }
 }
