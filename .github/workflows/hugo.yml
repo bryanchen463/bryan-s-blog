@@ -51,6 +51,10 @@ jobs:
             --theme LoveIt \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Inject Five Elements CSS
+        run: |
+          find ./public -name "*.html" | xargs sed -i 's|</head>|  <link rel="stylesheet" href="/bryan-s-blog/css/custom.css">\n</head>|'
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
