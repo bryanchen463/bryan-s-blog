@@ -1,0 +1,92 @@
+{{ define "main" }}
+    {{- $pages := where site.RegularPages "Section" "posts" -}}
+    {{- $pages = $pages.ByDate.Reverse -}}
+    {{- $featured := false -}}
+    {{- if gt (len $pages) 0 -}}
+        {{- $featured = index $pages 0 -}}
+    {{- end -}}
+    {{- $secondary := first 2 (after 1 $pages) -}}
+    {{- $remaining := after 3 $pages -}}
+
+    <section class="editorial-hero">
+        <div class="editorial-hero__intro">
+            <p class="editorial-kicker">Notebook</p>
+            <h1 class="editorial-title">{{ .Title }}</h1>
+            {{ with .Params.description }}
+                <p class="editorial-dek">{{ . }}</p>
+            {{ end }}
+            <div class="editorial-copy">
+                {{ .Content }}
+            </div>
+        </div>
+
+        {{ with $featured }}
+            <article class="editorial-feature">
+                <p class="editorial-kicker">Featured Essay</p>
+                {{ with .GetTerms "categories" }}
+                    <div class="editorial-taxonomy">
+                        {{ range first 1 . }}
+                            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <p class="editorial-summary">
+                    {{ with .Params.description }}
+                        {{ . }}
+                    {{ else }}
+                        {{ .Summary | plainify | truncate 220 }}
+                    {{ end }}
+                </p>
+                <div class="editorial-meta">
+                    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>{{ .Date.Format "Jan 02, 2006" }}</time>
+                    <span>{{ .ReadingTime }} min read</span>
+                </div>
+                <a class="editorial-link" href="{{ .RelPermalink }}">Read feature</a>
+            </article>
+        {{ end }}
+    </section>
+
+    {{ if gt (len $secondary) 0 }}
+        <section class="editorial-rail">
+            <div class="editorial-rail__header">
+                <p class="editorial-kicker">From The Desk</p>
+                <h2>Fresh notes and in-progress ideas</h2>
+            </div>
+            <div class="editorial-rail__grid">
+                {{ range $secondary }}
+                    <article class="editorial-rail__item">
+                        <p class="editorial-rail__meta">{{ .Date.Format "Jan 02, 2006" }}</p>
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p>
+                            {{ with .Params.description }}
+                                {{ . }}
+                            {{ else }}
+                                {{ .Summary | plainify | truncate 140 }}
+                            {{ end }}
+                        </p>
+                    </article>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
+
+    {{ if gt (len $remaining) 0 }}
+        <section class="editorial-stream">
+            <div class="editorial-stream__header">
+                <p class="editorial-kicker">Latest Writing</p>
+                <h2>Essays, guides, and experiments</h2>
+            </div>
+
+            <div class="article-list">
+                {{ range $remaining }}
+                    {{ partial "article-list/default" . }}
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
+
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}{{ end }}

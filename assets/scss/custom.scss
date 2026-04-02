@@ -50,6 +50,211 @@ body {
     }
 }
 
+.main.full-width {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.editorial-kicker {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.editorial-title,
+.editorial-hero h2,
+.editorial-stream__header h2,
+.editorial-rail__header h2 {
+    margin: 0;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    color: var(--card-text-color-main);
+}
+
+.editorial-title {
+    font-size: clamp(4.4rem, 9vw, 8.4rem);
+    max-width: 7ch;
+}
+
+.editorial-dek {
+    margin: 18px 0 0;
+    max-width: 30ch;
+    font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+    line-height: 1.3;
+    color: var(--card-text-color-main);
+}
+
+.editorial-copy {
+    max-width: 54ch;
+    margin-top: 24px;
+    font-size: 1.55rem;
+    line-height: 1.85;
+}
+
+.editorial-hero,
+.editorial-rail,
+.editorial-stream {
+    position: relative;
+}
+
+.editorial-hero {
+    display: grid;
+    gap: 18px;
+    align-items: stretch;
+
+    @media (min-width: 980px) {
+        grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.9fr);
+    }
+}
+
+.editorial-hero__intro,
+.editorial-feature,
+.editorial-rail__item,
+.editorial-stream .article-list article {
+    background: var(--card-background);
+    border: 1px solid rgba(31, 43, 37, 0.06);
+    box-shadow: var(--shadow-l1);
+}
+
+.editorial-hero__intro {
+    padding: clamp(28px, 5vw, 52px);
+    border-radius: 36px;
+    background:
+        linear-gradient(180deg, rgba(255, 252, 247, 0.7), rgba(255, 252, 247, 0.92)),
+        radial-gradient(circle at top right, rgba(200, 121, 65, 0.16), transparent 24%);
+}
+
+:root[data-scheme="dark"] .editorial-hero__intro {
+    background:
+        linear-gradient(180deg, rgba(29, 40, 36, 0.82), rgba(23, 32, 28, 0.94)),
+        radial-gradient(circle at top right, rgba(200, 121, 65, 0.18), transparent 28%);
+}
+
+.editorial-feature {
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100%;
+    background:
+        linear-gradient(180deg, rgba(26, 38, 33, 0.12), rgba(26, 38, 33, 0.04)),
+        linear-gradient(160deg, #204f41, #17352d 70%);
+    color: #f7f3ea;
+}
+
+.editorial-feature h2 {
+    font-size: clamp(3rem, 4.8vw, 5.4rem);
+    color: #f7f3ea;
+}
+
+.editorial-feature a {
+    color: inherit;
+}
+
+.editorial-taxonomy {
+    margin-bottom: 18px;
+}
+
+.editorial-taxonomy a {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(247, 243, 234, 0.12);
+}
+
+.editorial-summary {
+    margin: 20px 0 0;
+    font-size: 1.6rem;
+    line-height: 1.85;
+    color: rgba(247, 243, 234, 0.82);
+}
+
+.editorial-meta {
+    margin-top: 22px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(247, 243, 234, 0.62);
+}
+
+.editorial-link {
+    margin-top: 28px;
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgba(247, 243, 234, 0.4);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.editorial-rail,
+.editorial-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.editorial-rail__header,
+.editorial-stream__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 4px 0;
+}
+
+.editorial-rail__header h2,
+.editorial-stream__header h2 {
+    font-size: clamp(2.4rem, 3vw, 4rem);
+}
+
+.editorial-rail__grid {
+    display: grid;
+    gap: 18px;
+
+    @media (min-width: 820px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.editorial-rail__item {
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.editorial-rail__meta {
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--card-text-color-tertiary);
+}
+
+.editorial-rail__item h3 {
+    margin: 0;
+    font-size: clamp(2.2rem, 2.8vw, 3rem);
+    letter-spacing: -0.04em;
+}
+
+.editorial-rail__item p:last-child {
+    margin: 16px 0 0;
+    font-size: 1.48rem;
+    line-height: 1.8;
+}
+
 .left-sidebar {
     header {
         padding: 28px;
@@ -137,6 +342,7 @@ body {
 .article-list article {
     position: relative;
     overflow: hidden;
+    border-radius: 26px;
 }
 
 .article-list article::before {
