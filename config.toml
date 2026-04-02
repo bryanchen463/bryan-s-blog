@@ -26,6 +26,7 @@ publishDir = "public"
     customText = "Exploring the flow of code & life."
 
   [params.sidebar]
+    avatar = "img/avatar.svg"
     emoji = "BC"
     subtitle = "Notes on code, tools, and everyday experiments."
 
@@ -61,3 +62,27 @@ publishDir = "public"
 
   [menu.social.params]
     icon = "brand-github"
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 40
