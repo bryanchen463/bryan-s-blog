@@ -35,8 +35,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Clone LoveIt theme
-        run: git clone --depth 1 https://github.com/dillonzq/LoveIt.git themes/LoveIt
+      - name: Clone Stack theme
+        run: git clone --depth 1 https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack
 
       - name: Setup Pages
         id: pages
@@ -48,7 +48,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --theme LoveIt \
+            --theme hugo-theme-stack \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact

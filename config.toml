@@ -1,30 +1,63 @@
 baseURL = "https://bryanchen463.github.io/bryan-s-blog/"
 languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
 title = "Bryan Chen"
-theme = "LoveIt"
+theme = "hugo-theme-stack"
 publishDir = "public"
 
-[build]
-  writeStats = true
+[pagination]
+  pagerSize = 5
 
-[build.archive]
-  enable = true
+[permalinks]
+  posts = "/posts/:filename/"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
 
 [params]
-  description = "Exploring the flow of code & life. Bryan的技术与生活博客"
+  mainSections = ["posts"]
+  rssFullContent = true
+  description = "Exploring the flow of code and life. Bryan's blog."
 
-  [params.author]
-    name = "Bryan Chen"
+  [params.footer]
+    since = 2026
+    customText = "Exploring the flow of code & life."
 
-  [params.cdn]
-    disable = false
+  [params.sidebar]
+    emoji = "BC"
+    subtitle = "Notes on code, tools, and everyday experiments."
 
-  [params.comment]
-    enable = false
+  [params.article]
+    toc = true
+    readingTime = true
+    headingAnchor = false
+    math = false
 
-  [params.assets]
-    customCSS = ["css/custom.css"]
+    [params.article.license]
+      enabled = false
+
+  [params.widgets]
+    homepage = [
+      { type = "search" },
+      { type = "archives", params = { limit = 5 } },
+      { type = "categories", params = { limit = 10 } },
+      { type = "tag-cloud", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [params.comments]
+    enabled = false
+
+[[menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/bryanchen463/bryan-s-blog"
+
+  [menu.social.params]
+    icon = "brand-github"
