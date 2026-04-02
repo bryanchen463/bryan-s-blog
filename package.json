@@ -1,16 +1,27 @@
 {
-  "name": "hugo-blog",
+  "name": "bryan-s-blog",
   "version": "1.0.0",
-  "description": "使用 Hugo + GitHub Actions 搭建的个人博客",
-  "main": "index.js",
+  "private": true,
+  "description": "Bryan Chen's Hugo blog, ready for Cloudflare Pages.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "hugo --theme hugo-theme-stack",
+    "build:cf": "curl -L -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.157.0/hugo_extended_withdeploy_0.157.0_linux-amd64.tar.gz && tar -xzf hugo.tar.gz && chmod +x ./hugo && git clone --depth 1 https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack && ./hugo --theme hugo-theme-stack -b \"${CF_PAGES_URL:-https://example.pages.dev}\"",
+    "deploy:cf": "wrangler pages deploy",
+    "preview:cf": "wrangler pages dev public",
+    "test": "echo \"No tests configured\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bryanchen007/hugo-blog.git"
+    "url": "git+https://github.com/bryanchen463/bryan-s-blog.git"
   },
-  "keywords": ["hugo", "blog", "github-pages"],
+  "keywords": [
+    "hugo",
+    "blog",
+    "cloudflare-pages"
+  ],
   "author": "Bryan Chen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.9.1"
+  }
 }
