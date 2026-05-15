@@ -26,7 +26,6 @@ publishDir = "public"
     customText = "Exploring the flow of code & life."
 
   [params.sidebar]
-    avatar = "img/avatar.svg"
     emoji = "BC"
     subtitle = "Notes on code, tools, and everyday experiments."
 
